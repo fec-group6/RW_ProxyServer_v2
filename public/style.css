@@ -21,7 +21,10 @@
 }
 
 #fullVideoList {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   display: inline-block;
   max-width: 500px;
-  margin: 33px 20px 0 0;
+  margin: 25px 50px 0 0;
 }

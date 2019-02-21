@@ -137,8 +137,13 @@ class Comment extends React.Component {
   }
 
   likeToggle() {
-    let increment = this.state.newLike === 0 ? 1 : 0;
-    let feelingAsBool = increment === 0 ? false : true;
+    let increment;
+    if (this.props.liked) {
+      increment = this.state.newLike === 0 ? -1 : 0;
+    } else {
+      increment = this.state.newLike === 0 ? 1 : 0;
+    }
+    let feelingAsBool = increment === 0 ? this.props.liked : !this.props.liked;
     commentFeelingPost('testUser', this.props.id, 'like', feelingAsBool, (data, status) => {
       console.log(data);
     }, (err, errDesc) => {
@@ -150,8 +155,13 @@ class Comment extends React.Component {
   }
 
   dislikeToggle() {
-    let increment = this.state.newDislike === 0 ? 1 : 0;
-    let feelingAsBool = increment === 0 ? false : true;
+    let increment;
+    if (this.props.disliked) {
+      increment = this.state.newDislike === 0 ? -1 : 0;
+    } else {
+      increment = this.state.newDislike === 0 ? 1 : 0;
+    }
+    let feelingAsBool = increment === 0 ? this.props.disliked : !this.props.disliked;
     commentFeelingPost('testUser', this.props.id, 'dislike', feelingAsBool, (data, status) => {
       console.log(data);
     }, (err, errDesc) => {

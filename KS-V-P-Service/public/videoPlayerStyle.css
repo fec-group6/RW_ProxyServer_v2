@@ -2,7 +2,12 @@ body {
   margin: 0;
 }
 .searchBar {
-  padding: 20px 0 30px 50px;
+  padding: 20px 45px 20px 20px;
+  width: 100%;
+}
+
+#searchInputField {
+  width: 100%;
 }
 
 .commentsSection {
