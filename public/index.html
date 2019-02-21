@@ -11,12 +11,18 @@
     <title>YouTune</title>
   </head>
   <body>
-    <div id="fullVideoPlayer"></div>
-    <div id="videoDetailsAndComments"></div>
+    <div id="rowFlex">
+      <div id="colFlex">
+        <div id="fullVideoPlayer"></div>
+        <div id="videoDetailsAndComments"></div>
+      </div>
+      <div id="fullVideoList"></div>
+    </div>
     <script src="/react/umd/react.development.js"></script>
     <script src="/react-dom/umd/react-dom.development.js"></script>
     <script src="http://localhost:3001/bundle.js"></script>
     <script src="http://localhost:3002/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
     <script>
       ReactDOM.render(
         React.createElement(FullVideoPlayer),
@@ -25,6 +31,10 @@
       ReactDOM.render(
         React.createElement(VideoDetailsAndComments),
         document.getElementById('videoDetailsAndComments')
+      );
+      ReactDOM.render(
+        React.createElement(FullVideoList),
+        document.getElementById('fullVideoList')
       );
     </script>
   </body>

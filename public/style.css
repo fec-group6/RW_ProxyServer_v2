@@ -1,0 +1,27 @@
+#rowFlex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#colFlex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 929px;
+}
+
+#fullVideoPlayer {
+  display: inline-block;
+  width: 100%;
+}
+
+#videoDetailsAndComments {
+  display: inline-block;
+}
+
+#fullVideoList {
+  display: inline-block;
+  max-width: 500px;
+  margin: 33px 20px 0 0;
+}

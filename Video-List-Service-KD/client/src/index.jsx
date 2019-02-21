@@ -5,7 +5,7 @@ import VideoList from './list-component.jsx';
 import $ from 'jquery';
 bar();
 
-class App extends React.Component {
+class FullVideoList extends React.Component {
 
   constructor() {
     super();
@@ -17,18 +17,20 @@ class App extends React.Component {
 
 
   componentDidMount() {
+    console.log('issuing request');
     $.ajax({
-      url: 'http://127.0.0.1:3000/videos',
+      url: 'http://127.0.0.1:3003/videos',
       type: 'GET',
       success: (data)=>{
-          this.setState({ videos: data })
+          this.setState({ videos: data });
+          console.log(data);
     }
   })
 }
 
   fetch() {
     $.ajax({
-      url: 'http://127.0.0.1:3000/videos',
+      url: 'http://127.0.0.1:3003/videos',
       type: 'GET',
       success: (data)=>{
           this.setState({
@@ -45,7 +47,7 @@ class App extends React.Component {
   updateVideos() {
 
     $.ajax({
-      url: 'http://127.0.0.1:3000/videos',
+      url: 'http://127.0.0.1:3003/videos',
       type: 'GET',
       success: (data)=>{
         this.setState({
@@ -65,16 +67,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-       <h1> Rendering through react</h1>
+       <h1>Up Next</h1>
        <VideoList videos={this.state.videos} onClick ={this.updateVideos}/>
        </div>
         )
    }
 }
 
-    export default App;
+    export default FullVideoList;
 
-    ReactDOM.render(<App/>, document.getElementById("app-test") || document.createElement('div'));
+    // ReactDOM.render(<App/>, document.getElementById("app-test") || document.createElement('div'));
 
 
 

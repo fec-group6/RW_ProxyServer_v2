@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
-const db = require('../db/index.js')
+const db = require('../db/index.js');
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 
@@ -14,7 +19,7 @@ app.get('/videos', (req, res)=>{
 
 
 
-let port = 3000;
+let port = 3003;
 
 // app.listen(port, function() {
 //   console.log(`listening on port ${port}`);

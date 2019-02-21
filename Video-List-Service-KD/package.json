@@ -8,9 +8,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "seed": "node seed.js",
+    "seed": "node db/seed.js",
     "build": "webpack --mode production",
-    "test":  "NODE_ENV=test jest --watchAll",
+    "test": "NODE_ENV=test jest --watchAll",
     "test:watch": "jest --watch",
     "server-dev": "nodemon server/index.js",
     "react-dev": "webpack -d --watch"
@@ -26,6 +26,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.0",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "mongoose": "^5.4.10"

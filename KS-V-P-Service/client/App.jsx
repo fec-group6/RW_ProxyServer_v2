@@ -52,19 +52,16 @@ class FullVideoPlayer extends React.Component {
     return (
       <div>
         <SearchBar handleSearchInput={this.handleSearchInput.bind(this)} />
-        <div >
-          <div className="row">
-            <div className="col-xl-8">
-              <VideoPlayer video={this.state.video} />
-            </div>
-            <div className="col-xl-4">
-              <VideoList />
-            </div>
-          </div>
-        </div>
+        <VideoPlayer video={this.state.video} />
       </div>
     );
   }
 }
 
 export default FullVideoPlayer;
+/*
+<div className="row">
+<div className="col-xl-8">
+              <VideoPlayer video={this.state.video} />
+            </div>
+*/
