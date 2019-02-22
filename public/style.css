@@ -8,12 +8,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 929px;
+  max-width: 924px;
 }
 
 #fullVideoPlayer {
   display: inline-block;
+  box-sizing: border-box;
   width: 100%;
+  padding-left: 20px;
+  margin-top: 12px;
+  padding-right: 16px;
 }
 
 #videoDetailsAndComments {
