@@ -8,7 +8,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "server-dev": "nodemon server.js | nodemon KS-V-P-Service/server/index.js | nodemon Subscribe_Comments/server/index.js | nodemon Video-List-Service-KD/server/index.js"
+    "server-dev": "nodemon server.js | nodemon KS-V-P-Service/server/index.js | nodemon Subscribe_Comments/server/index.js | nodemon Video-List-Service-KD/server/index.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
