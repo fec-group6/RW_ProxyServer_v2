@@ -20,14 +20,14 @@
     </div>
     <script src="/react/umd/react.development.js"></script>
     <script src="/react-dom/umd/react-dom.development.js"></script>
-    <!-- <script src="http://fec-ks-proxy.j8gdwzpk9s.us-west-2.elasticbeanstalk.com/bundle.js"></script> -->
+    <script src="http://ks-v-p-service-dev.us-west-2.elasticbeanstalk.com/bundle.js"></script>
     <script src="http://node-express-env.pkkg93qppn.us-west-2.elasticbeanstalk.com/bundle.js"></script>
     <!-- <script src="http://localhost:3003/bundle.js"></script> -->
     <script>
-      // ReactDOM.render(
-      //   React.createElement(App),
-      //   document.getElementById('fullVideoPlayer')
-      // );
+      ReactDOM.render(
+        React.createElement(FullVideoPlayer),
+        document.getElementById('fullVideoPlayer')
+      );
       ReactDOM.render(
         React.createElement(VideoDetailsAndComments),
         document.getElementById('videoDetailsAndComments')
