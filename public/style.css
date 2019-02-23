@@ -1,4 +1,6 @@
 #rowFlex {
+  box-sizing: border-box;
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -30,5 +32,5 @@
   font-weight: 400;
   display: inline-block;
   max-width: 500px;
-  margin: 28px 50px 0 0;
+  margin: 28px 75px 0 0;
 }
