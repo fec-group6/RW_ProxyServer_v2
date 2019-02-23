@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/videoPlayerStyle.css">
+    <link rel="stylesheet" type="text/css" href="/videoList.css">
     <title>YouTune</title>
   </head>
   <body>
@@ -22,7 +23,7 @@
     <script src="/react-dom/umd/react-dom.development.js"></script>
     <script src="http://ks-v-p-service-dev.us-west-2.elasticbeanstalk.com/bundle.js"></script>
     <script src="http://node-express-env.pkkg93qppn.us-west-2.elasticbeanstalk.com/bundle.js"></script>
-    <!-- <script src="http://localhost:3003/bundle.js"></script> -->
+    <script src="http://video-list-service-kd-dev.us-west-2.elasticbeanstalk.com/bundle.js"></script>
     <script>
       ReactDOM.render(
         React.createElement(FullVideoPlayer),
@@ -32,10 +33,10 @@
         React.createElement(VideoDetailsAndComments),
         document.getElementById('videoDetailsAndComments')
       );
-      // ReactDOM.render(
-      //   React.createElement(App),
-      //   document.getElementById('fullVideoList')
-      // );
+      ReactDOM.render(
+        React.createElement(FullVideoList),
+        document.getElementById('fullVideoList')
+      );
     </script>
   </body>
 </html>
